@@ -13,7 +13,9 @@ const root = createRoot(el)
 
 root.render(
   <Provider store={store}>
-    <Router />
+    <div data-theme="light">
+      <Router />
+    </div>
   </Provider>
 )
 

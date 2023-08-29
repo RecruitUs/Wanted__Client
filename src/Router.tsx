@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import AuthPage from './pages/AuthPage'
 
 const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<div>Home</div>} />
+        <Route path="/login" element={<AuthPage />} />
       </Routes>
      </BrowserRouter>   
   )

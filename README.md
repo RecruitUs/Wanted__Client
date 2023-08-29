@@ -9,6 +9,7 @@
 - axios
 - prettier, eslint
 - daisyui
+- react-country-flag
 - RTK
 
 # Modified folers
