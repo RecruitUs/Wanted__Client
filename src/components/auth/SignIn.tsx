@@ -53,7 +53,7 @@ const SignIn = () => {
             <p className='flex items-center justify-center mt-[30px] text-gray01 text-[14px]'>계정을 잊으셨나요? <MdKeyboardArrowRight className="text-xl"/></p>
           </button>
           {/* ETC */}
-          <div className='social-divider'></div>
+          <div className='social-divider my-[30px]'></div>
           <div className='flex-center text-[13px] space-x-3 mb-[15px]'>
             <a className='text-gray01' href="https://id.wanted.jobs/terms/ko" target='_blank'>이용약관</a>
             <a className='font-bold text-gray01' href="https://id.wanted.jobs/privacy/ko?user=true" target='_blank'>개인정보처리방침</a>
