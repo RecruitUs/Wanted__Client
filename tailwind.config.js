@@ -19,6 +19,8 @@ export default {
         gray01: '#888888',
         gray02: '#f2f4f7',
         gray03: '#cccccc',
+        gray04: '#f3f5f8',
+        green01: '#e4f4ec',
       }
     },
   },

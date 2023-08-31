@@ -5,7 +5,7 @@ import SearchIcon from '../../assets/images/image-search.svg'
 
 const Header = () => {
   return (
-    <header className='sticky top-0 w-full h-[50px]'>
+    <header className='sticky z-20 top-0 w-full h-[50px] bg-white'>
       <div className='h-full flex-center'>
         <nav className='w-[1060px] h-full flex items-center justify-between'>
           {/* Hamburger Menu + LOGO */}
@@ -32,7 +32,9 @@ const Header = () => {
               </li>
               <li>
                 <button className='flex-center px-2.5 text-[14px] font-medium'>
-                  회원가입/로그인
+                  <Link to='/login'>
+                    회원가입/로그인
+                  </Link>
                 </button>
               </li>
               <li className='flex items-center'>  
