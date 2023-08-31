@@ -1,13 +1,26 @@
+import { useSelector } from 'react-redux/es/hooks/useSelector'
 import NationSelect from '../common/NationSelect'
 import { BsCheckLg } from 'react-icons/bs'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
+  const email = useSelector((state: any) => state.auth.email)
+  
+  const navigate = useNavigate()
+  const handleBack = () => {
+    const confirm = window.confirm('회원가입을 취소하고 이전 화면으로 되돌아갑니다. 계속하시겠어요?')
+    if(confirm) {
+      navigate(-1)
+    }
+  }
+
+
   return (
     <main className='w-screen h-screen flex-center bg-primaryGray'>
       <section className='w-[400px] h-[1073px] bg-white border'>
         {/* INFOMATION */}
         <div className='flex w-full h-16 px-5'>
-          <div className='flex items-center w-16 h-full font-normal'>취소</div>
+          <div onClick={handleBack} className='flex items-center w-16 h-full font-normal cursor-pointer'>취소</div>
           <div className='flex-center w-[230px] h-full font-medium text-lg'>회원가입</div>
           <div className='flex items-center w-16 h-full'></div>
         </div>
@@ -19,8 +32,10 @@ const SignUp = () => {
               <label className='block text-gray01 text-[14px] opacity-80 font-semibold mb-[7px]'>이메일</label>
               <input 
                 type="email"
-                placeholder='이메일을 입력해주세요'
-                className='w-full h-[50px] px-3 border border-gray03 bg-gray02 opacity-80 rounded-md text-primaryGray mb-2'/>
+                value={email}
+                disabled
+                placeholder='이메일'
+                className='w-full h-[50px] px-3 border border-gray03 bg-gray02 opacity-80 rounded-md text-gray03 placeholder-primaryGray mb-2'/>
             </div>
             {/* INPUT__BOX */}
             <div className='w-full h-[85px] mt-[20px]'>

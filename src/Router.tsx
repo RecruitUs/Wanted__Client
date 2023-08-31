@@ -21,7 +21,7 @@ const Router = () => {
         <Route path="/wd/:id" element={<Wd />} />
       </Routes>
       <ConditionalFooter />
-     </BrowserRouter>   
+    </BrowserRouter>   
   )
 }
 
