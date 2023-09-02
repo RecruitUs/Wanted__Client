@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit' 
-import { authReducer, setEmail } from './slices/authslice'
+import { authReducer, setEmail, setName, setPassword, setConfirmPassword, setPhoneNumber } from './slices/authslice'
 
 const store = configureStore({
   reducer: {
@@ -7,4 +7,4 @@ const store = configureStore({
   },
 })
 
-export { store, setEmail }
+export { store, setEmail, setName, setPassword, setConfirmPassword, setPhoneNumber }
